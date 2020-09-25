@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/app/themes/sage",
-  "devUrl": "http://local.lunar-wp-base",
+  "devUrl": "http://bottega.local",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
