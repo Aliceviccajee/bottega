@@ -17,10 +17,10 @@ $spacer:                2rem;
 
 /** Fonts  */
 @font-face {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     src: url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
 }
 
-$body-font: 'Poppins';
+$body-font: Poppins', sans-serif;

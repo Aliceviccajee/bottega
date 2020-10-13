@@ -48,7 +48,7 @@ wordpress_sites:
       enabled: false
 ````
 
-* Create a file called .vault_pass at the root of the trellis directory. Paste in the password stored in LastPass, under 'Lunar base theme encryption password'.
+* Create a file called .vault_pass at the root of the trellis directory. Paste in the password stored in LastPass, under 'Bottega theme encryption password'.
 
 * Define admin passwords, database passwords and other sensitive data in /trellis/group_vars/development/vault.yml. This has been encrypted in order that it can be committed to the repo.
 
@@ -56,7 +56,7 @@ To edit the development vault file, run the following command:
 ````
 ansible-vault edit trellis/group_vars/development/vault.yml
 ````
-When prompted, supply the Lunar base theme encryption password.
+When prompted, supply the Bottega theme encryption password.
 
 * Ensure that the site name matches the one defined in /trellis/group_vars/development/wordpress_sites.yml. For example:
 ````
@@ -100,7 +100,7 @@ yarn && yarn build
 ansible-vault view trellis/group_vars/development/vault.yml
 ````
 
-* Set theme to Lunar Base Theme
+* Set theme to Bottega theme
 * Activate plugins
 * Or, upload an existing database. Database details are found in .env, which will have been generated from the encrypted vault.yml file on vagrant up.
 
