@@ -1,16 +1,10 @@
 /** Colors */
-$brand-primary: #525ddc;
 
-$black: #333;
-
-$grey--darkest: #2B2B2B;
-$grey: #7f7f7f;
-$grey--light: #DEDEDE;
-$grey--lighter: #ECECEA;
-$grey--lightest: #F5F5F5;
+$primary-blue: #012A52;
+$white: #ffffff;
+$black: #000000;
 
 /** Breakpoints  */
-// NB: update js files if these change;
 $max-width: 1500px;
 $max-width-inner: 1068px;
 $breakpoint--lg: 1068px;
@@ -19,3 +13,14 @@ $breakpoint--sm: 501px;
 
 /** Box Model  */
 $spacer:                2rem;
+
+
+/** Fonts  */
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+}
+
+$body-font: 'Poppins';
