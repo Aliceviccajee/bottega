@@ -1,4 +1,4 @@
-# lunar-wp-base
+# Bottega
 Base Wordpress theme and setup using Roots. Comprehensive documentation for Roots can be found [here](root.io).
 
 ## Setup
@@ -12,20 +12,6 @@ Your machine must have the following dependencies
 * Yarn
 
 See the [Roots documentation for installing machine dependencies](https://roots.io/getting-started/docs/macos-basic-setup/).
-
-### Quick setup
-
-* [Fork this repo](https://help.github.com/en/github/getting-started-with-github/fork-a-repo)
-
-* Clone the newly created repo, for example:
-````
-git clone git@github.com:lunar-build/lunar-wp-base.git
-````
-
-* Change directory into project root, for example:
-````
-cd lunar-wp-base
-````
 
 #### Define and build local environment
 
