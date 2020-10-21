@@ -1,26 +1,44 @@
 /** Colors */
 
-$primary-blue: #012A52;
-$white: #ffffff;
-$black: #000000;
+    $primary-blue: #012A52;
+    $white: #ffffff;
+    $black: #000000;
+    $pink: #FA9FBA;
 
 /** Breakpoints  */
-$max-width: 1500px;
-$max-width-inner: 1068px;
-$breakpoint--lg: 1068px;
-$breakpoint--md: 768px;
-$breakpoint--sm: 501px;
+    $max-width: 1500px;
+    $max-width-inner: 1068px;
+    $breakpoint--lg: 1068px;
+    $breakpoint--md: 768px;
+    $breakpoint--sm: 501px;
 
 /** Box Model  */
-$spacer:                2rem;
+    $spacer:                2rem;
 
 
 /** Fonts  */
-@font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
-}
+    @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
+    }
 
-$body-font: 'Poppins', sans-serif;
+    @font-face {
+        font-family: 'Poppins-bold';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype');
+    }
+
+    @font-face {
+        font-family: 'Lobster';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/Lobster/Lobster-Regular.ttf') format('truetype');
+    }
+
+    $body-font: 'Poppins', sans-serif;
+    $lobster: 'Lobster', sans-serif;
+    $body-bold: 'Poppins-bold', sans-serif;
+
