@@ -27,6 +27,7 @@
     @endphp
 
     @if(wc_get_loop_prop('total'))
+      @php dd("winning") @endphp
       @while(have_posts())
         @php
           the_post();

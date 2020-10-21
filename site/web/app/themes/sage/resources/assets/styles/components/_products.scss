@@ -1,0 +1,19 @@
+.menu {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.woocommerce-products-header {
+    text-align: center;
+}
+
+.products {
+    width: 100%;
+    .product-card {
+        margin: 1rem 0;
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
