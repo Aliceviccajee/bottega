@@ -1,6 +1,11 @@
-  <!-- <div class="page-header">
-    <div class="page-heading">
-      <h1>Menu</h1>
-      <h2>Tagline</h2>
-    </div>
-  </div> -->
+<div class="wrapper-hero">
+  <div class="hero-text">
+    <h1>
+    {{ get_field('title') }}
+    </h1>
+    <p>
+    {{ get_field('tagline') }}
+    </p>
+  </div>
+</div>
+

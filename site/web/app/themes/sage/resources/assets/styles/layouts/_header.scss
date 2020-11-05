@@ -16,27 +16,29 @@
             text-transform: uppercase;
         }
     }
-    .header {
-        .container {
+}
+.header {
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        background-color: blueviolet;
+        .nav { 
             display: flex;
-            justify-content: flex-end;
-            .nav { 
-                display: flex;
-                li {
-                    margin: 0 20px;
-                    list-style: none;
-                    a {
-                        color: $white;
-                        font-family: $body-font;
-                        text-transform: uppercase;
-                        text-decoration: none;
-                        padding: 1rem;
-                        &:hover {
-                            color: $primary-blue;
-                        }
+            li {
+                margin: 0 20px;
+                list-style: none;
+                a {
+                    color: $white;
+                    font-family: $body-font;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    padding: 1rem;
+                    &:hover {
+                        color: $primary-blue;
                     }
-                }   
-            }
+                }
+            }   
         }
     }
 }
+

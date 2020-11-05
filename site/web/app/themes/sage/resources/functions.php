@@ -90,3 +90,15 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+
+function custom_add_cart_button () {
+    add_action( 'woocommerce_after_shop_loop_item_title','woocommerce_template_loop_add_to_cart', 10 );
+}
+
+add_action('woocommerce_single_product_summary', 'customizing_single_product_summary_hooks', 2  );
+function customizing_single_product_summary_hooks(){
+    remove_action('woocommerce_single_product_summary','woocommerce_template_single_title', 5  );
+    remove_action('woocommerce_single_product_summary','woocommerce_template_single_meta',40 );
+    remove_action('woocommerce_single_product_summary','WC_Structured_Data::generate_product_data()',60 );
+}
