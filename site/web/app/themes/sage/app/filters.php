@@ -89,3 +89,13 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+
+// Hook in
+add_filter( 'woocommerce_checkout_fields' , function ( $fields ) {
+    unset($fields['billing']['billing_company']);
+    unset($fields['billing']['county']);
+    unset($fields['shipping']['shipping_company']);
+    unset($fields['shipping']['county']);
+    return $fields;
+});
