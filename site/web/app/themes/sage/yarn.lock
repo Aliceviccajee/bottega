@@ -4468,6 +4468,16 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
+jquery-datepicker@^1.12.3:
+  version "1.12.3"
+  resolved "https://registry.yarnpkg.com/jquery-datepicker/-/jquery-datepicker-1.12.3.tgz#c08c9a25e8936298786b341672fab54b92d13003"
+  integrity sha512-dj140t4syBKTLOvqnDJ/x03u9HcoatvX99t5IY/0IfEtxDtJAxB2VBCAZehbtHJg9Sb7YdC6/2BnGFk1pr/SgA==
+
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
+
 jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
