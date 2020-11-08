@@ -76,7 +76,7 @@ class BookingController {
 			})->toArray();
 
 			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings) {
-				return !isset($bookings[$slot]) || $bookings[$slot] < 1;
+				return !isset($bookings[$slot]) || $bookings[$slot] < 2;
 			})->values()->toArray();
 
 			$this->respondWith('json');
