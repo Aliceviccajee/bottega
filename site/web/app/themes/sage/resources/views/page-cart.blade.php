@@ -48,4 +48,8 @@
 	do_action( 'woocommerce_after_cart_contents' );
 	do_action( 'woocommerce_after_cart' );
 @endphp
+	<footer>
+		<a href="{{get_permalink( wc_get_page_id( 'shop' ) )}}">Back to menu</a>
+		<a href="{{wc_get_checkout_url()}}">Checkout</a>
+	</footer>
 @endsection
