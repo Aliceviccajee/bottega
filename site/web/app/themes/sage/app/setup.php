@@ -216,3 +216,14 @@ add_action('woocommerce_email_customer_details', function( $order, $sent_to_admi
 
 	echo $output;
 }, 15, 4 );
+
+add_action( 'woocommerce_order_status_changed', function( $order_id, $old_status, $new_status ){
+	if( $new_status == "completed" ) {
+		$date = get_post_meta( $order_id, '_date_slot', true );
+		$time = get_post_meta( $order_id, '_time_slot', true );
+
+		global $wpdb;
+
+		$wpdb->query("INSERT INTO wp_delivery_slots (time, booking_date) VALUES ('$time', '$date');");
+	}
+}, 99, 3 );
