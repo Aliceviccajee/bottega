@@ -123,11 +123,22 @@ class BookingController {
 		$base_pc = get_option( "woocommerce_store_postcode" );
 		$api_key = env("MAPS_API_KEY");
 
-		$url = "http://maps.googleapis.com/maps/api/distancematrix/json?origins=BS140SA&destinations=BS32LP2&mode=driving&language=en-EN&sensor=false&key=https://maps.googleapis.com/maps/api/distancematrix/json?origins=$base_pc}&destinations=$client_pc&mode=driving&language=en-EN&sensor=false&key=$api_key";
+		$ch = curl_init();
 
-		$data = @file_get_contents(urldecode($url));
-		dd($data);
+		$url = "https://maps.googleapis.com/maps/api/distancematrix/";
 
-		$result = json_decode($data, true);
+		// Array of options to be passed to API<br>
+		$options = array(
+				"origins" => $base_pc,
+				"destinations" => $client_pc,
+				"units" => "imperial",
+				"language" => "en-GB",
+				"key" => $api_key
+		);
+		$request = $url . "?" . http_build_query( $options );
+		curl_setopt($ch, CURLOPT_URL, $request);
+		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+		$output = json_decode(curl_exec($ch), true);
+		dd($output);
 	}
 }
