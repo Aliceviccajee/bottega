@@ -9,10 +9,9 @@ $products = $query->get_products();
 
 @extends('layouts.app')
 
+
 @section('content')
-@include('partials.page-header')
 @php
-	do_action('get_header', 'shop');
 	do_action('woocommerce_before_main_content');
 @endphp
 
@@ -23,8 +22,8 @@ $products = $query->get_products();
 
 	@php
 		do_action('woocommerce_archive_description');
-		@endphp
-	</header>
+    @endphp
+</header>
 
 	<div class="menu">
 	<div class="products">
@@ -36,5 +35,4 @@ $products = $query->get_products();
 	@php
 		do_action('woocommerce_after_main_content');
 	@endphp
-	@endsection
-</div>
+@endsection

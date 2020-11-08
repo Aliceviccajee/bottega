@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4f3d297fa0a36cfe69cf42d8742bdb7e",
+    "content-hash": "63f709e991651435a1b871e85b7a89f3",
     "packages": [
         {
             "name": "automattic/woocommerce",
@@ -880,6 +880,39 @@
                 "wordpress"
             ],
             "time": "2018-12-28T01:46:28+00:00"
+        },
+        {
+            "name": "roots/sage-woocommerce",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/roots/sage-woocommerce.git",
+                "reference": "def4d3db371e10b6114c37ec1da67b0e9bceadac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/roots/sage-woocommerce/zipball/def4d3db371e10b6114c37ec1da67b0e9bceadac",
+                "reference": "def4d3db371e10b6114c37ec1da67b0e9bceadac",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/woocommerce.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Mejta",
+                    "email": "daniel@mejta.net"
+                }
+            ],
+            "description": "WooCommerce integration for Sage 9",
+            "time": "2020-01-11T02:28:25+00:00"
         },
         {
             "name": "soberwp/controller",

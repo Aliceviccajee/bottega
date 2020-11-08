@@ -11,7 +11,7 @@
         </main>
       </div>
     </div>
-    @php do_action('get_footer') @endphp
+    @php do_action('get_footer', 'shop') @endphp
     @include('partials.footer')
     @php wp_footer() @endphp
   </body>

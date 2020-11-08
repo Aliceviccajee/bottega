@@ -37,7 +37,8 @@
     "illuminate/support": "5.6.*",
     "roots/sage-lib": "~9.0.9",
     "soberwp/controller": "~2.1.0",
-    "automattic/woocommerce": "^3.0"
+    "automattic/woocommerce": "^3.0",
+    "roots/sage-woocommerce": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^2.8.0",
