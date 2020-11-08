@@ -1,6 +1,7 @@
-<form action="">
-    <label>Date: <input type="text" id="datepicker"></label>
+<form>
+    <label>Date: <input type="date" id="datepicker"></label>
     <label>Time:
 			<select id="timepicker"></select>
-    </label>
+		</label>
+    <label>Postcode: <input type="text" id="postcode"></label>
 </form>
