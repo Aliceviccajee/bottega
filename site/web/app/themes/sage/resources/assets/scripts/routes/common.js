@@ -24,6 +24,12 @@ export default {
 			});
 			$('#timepicker').on('change', function() {
 				sessionStorage.setItem('slot',$(this).val());
+
+				if ($(this).val() && $('#datepicker').val()) {
+					$('.products').addClass('enabled');
+				} else {
+					$('.products').removeClass('enabled');
+				}
 			})
 		});
 
