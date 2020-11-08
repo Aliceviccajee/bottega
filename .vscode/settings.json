@@ -16,5 +16,8 @@
 			],
 			"url": "./.vscode/pattern.json"
 		}
-	]
+	],
+	"javascript.preferences.quoteStyle": "single",
+	"typescript.preferences.quoteStyle": "single",
+	"prettier.singleQuote": true
 }
