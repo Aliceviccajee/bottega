@@ -12,7 +12,10 @@ export default {
 					$.get('/index.php/wp-json/v1/booking/times', {
 						date: this.value,
 					}).done(function (data) {
-						console.log('Data Loaded: ' + data);
+						const html = data.data.map(function(time) {
+							return `<option value="${time}">${time}</option>`;
+						})
+						$('#timepicker').html(html);
 					});
 				},
 			});
