@@ -6,7 +6,10 @@ export default {
     datepickerFactory($);
     // JavaScript to be fired on all pages
     $( function() {
-      $( '#datepicker' ).datepicker();
+      $( '#datepicker' ).datepicker({
+        dateFormat: 'dd/mm/yy',
+        minDate: 0,
+      });
     } );
   },
   finalize() {
