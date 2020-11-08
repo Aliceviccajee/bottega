@@ -2,6 +2,8 @@ import datepickerFactory from 'jquery-datepicker';
 
 export default {
 	init() {
+		sessionStorage.SessionName = 'bottega-booking' ,
+
 		datepickerFactory($);
 		// JavaScript to be fired on all pages
 		$(function () {
@@ -19,6 +21,11 @@ export default {
 					});
 				},
 			});
+			$('#timepicker').on('change', function() {
+				console.log($(this).val());
+				sessionStorage.setItem('slot',$(this).val());
+
+			})
 		});
 	},
 	finalize() {
