@@ -1,0 +1,16 @@
+{
+	"title": {
+		"type": "string"
+	},
+	"description": {
+		"type": "string"
+	},
+	"instances": {
+		"type": "array"
+	},
+	"required": [
+		"title",
+		"description",
+		"instances"
+	]
+}

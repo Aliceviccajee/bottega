@@ -1,0 +1,20 @@
+{
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript"],
+  "editor.tabSize": 2,
+  "prettier.useTabs": true,
+  "editor.insertSpaces": false,
+  "editor.detectIndentation": false,
+	"files.trimTrailingWhitespace": true,
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"patterns/*.json",
+			],
+			"url": "./.vscode/pattern.json"
+		}
+	]
+}
