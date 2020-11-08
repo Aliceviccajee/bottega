@@ -35,6 +35,15 @@ export default {
 			date.textContent = date.textContent + ' ' + sessionStorage.getItem('date');
 			time.textContent = time.textContent + ' ' + sessionStorage.getItem('slot');
 		}
+
+		const dateInput = $('#date_slot');
+		const timeInput = $('#time_slot');
+		if (dateInput) {
+			dateInput.val(sessionStorage.getItem('date'));
+		}
+		if (timeInput) {
+			timeInput.val(sessionStorage.getItem('slot'));
+		}
 	},
 	finalize() {
 		// JavaScript to be fired on all pages, after page specific JS is fired

@@ -162,3 +162,57 @@ add_action( 'woocommerce_proceed_to_checkout', function() {
 
  echo ' <a href="'.$shop_page_url.'" class="button">Back to menu</a>';
 });
+
+add_action( 'woocommerce_order_status_completed', function ( $order_id ) {
+
+}, 10, 1 );
+
+// Outputting the hidden field in checkout page
+add_action( 'woocommerce_after_order_notes', function( $checkout ) {
+    echo '<input type="hidden" class="input-hidden" name="date_slot" id="date_slot" /><input type="hidden" class="input-hidden" name="time_slot" id="time_slot" />';
+});
+
+// Saving the hidden field value in the order metadata
+add_action( 'woocommerce_checkout_update_order_meta', function( $order_id ) {
+    if ( ! empty( $_POST['date_slot'] ) ) {
+        update_post_meta( $order_id, '_date_slot', sanitize_text_field( $_POST['date_slot'] ) );
+    }
+    if ( ! empty( $_POST['time_slot'] ) ) {
+        update_post_meta( $order_id, '_time_slot', sanitize_text_field( $_POST['time_slot'] ) );
+    }
+});
+
+// Displaying "Verification ID" in customer order
+add_action( 'woocommerce_order_details_after_customer_details', function( $order ) {
+	// compatibility with WC +3
+	$order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+
+	echo '<p class="order-time"><strong>'.__('Date', 'woocommerce') . ':</strong> ' . get_post_meta( $order_id, '_date_slot', true ) .'</p>';
+	echo '<p class="order-time"><strong>'.__('Time', 'woocommerce') . ':</strong> ' . get_post_meta( $order_id, '_time_slot', true ) .'</p>';
+}, 10 );
+
+
+ // Display "Date" on Admin order edit page
+add_action( 'woocommerce_admin_order_data_after_billing_address', function( $order ) {
+	// compatibility with WC +3
+	$order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+	echo '<p><strong>'.__('Date', 'woocommerce').':</strong> ' . get_post_meta( $order_id, '_date_slot', true ) . '</p>';
+	echo '<p><strong>'.__('Time', 'woocommerce').':</strong> ' . get_post_meta( $order_id, '_time_slot', true ) . '</p>';
+}, 10, 1 );
+
+
+// Displaying "Date" on email notifications
+add_action('woocommerce_email_customer_details', function( $order, $sent_to_admin, $plain_text, $email ) {
+	// compatibility with WC +3
+	$order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+
+	$output = '';
+	$date_slot = get_post_meta( $order_id, '_date_slot', true );
+
+	if ( !empty($date_slot) )
+			$output .= '<div><strong>' . __( "Date:", "woocommerce" ) . '</strong> <span class="text">' . $date_slot . '</span></div>';
+	if ( !empty($time_slot) )
+			$output .= '<div><strong>' . __( "Time:", "woocommerce" ) . '</strong> <span class="text">' . $time_slot . '</span></div>';
+
+	echo $output;
+}, 15, 4 );
