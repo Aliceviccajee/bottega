@@ -12,6 +12,7 @@ export default {
 				minDate: 0,
 				onSelect: function () {
 					sessionStorage.setItem('date',this.value);
+					$('#timepicker').html('<option>Checking availability...</option>')
 					$.get('/index.php/wp-json/v1/booking/times', {
 						date: this.value,
 					}).done(function (data) {
