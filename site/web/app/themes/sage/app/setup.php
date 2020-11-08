@@ -227,3 +227,14 @@ add_action( 'woocommerce_order_status_changed', function( $order_id, $old_status
 		$wpdb->query("INSERT INTO wp_delivery_slots (time, booking_date) VALUES ('$time', '$date');");
 	}
 }, 99, 3 );
+
+add_action( 'woocommerce_order_details_before_order_table_items', function($order) {
+	$order_id = $order->get_id();
+	$date = get_post_meta( $order_id, '_date_slot', true );
+	$time = get_post_meta( $order_id, '_time_slot', true );
+
+	echo '<div class="js-booking-info">
+	<p class="date">Delivery date: '.$date.'</p>
+	<p class="time">Delivery time: '.$time.'</p>
+</div>';
+}, 99, 3 );
