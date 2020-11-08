@@ -156,3 +156,9 @@ add_action('init', function () {
         }
     });
 });
+
+add_action( 'woocommerce_proceed_to_checkout', function() {
+ $shop_page_url = get_permalink( wc_get_page_id( 'shop' ) );
+
+ echo ' <a href="'.$shop_page_url.'" class="button">Back to menu</a>';
+});
