@@ -55,8 +55,7 @@ export default {
 		const postcodeInput = $('#postcode');
 
 		postcodeInput.on('blur', function() {
-			$.get(`http://maps.googleapis.com/maps/api/distancematrix/json?origins=BS140SA&destinations=BS32LP2&mode=driving&language=en-EN&sensor=false&key=https://maps.googleapis.com/maps/api/distancematrix/json?origins=${window.LOCALISED_VARS.base_postcode}&destinations=${postcodeInput.val()}&mode=driving&language=en-EN&sensor=false&key=${window.LOCALISED_VARS.maps_api_key}`).done(function (data) {
-				console.log(data);
+			$.get('/index.php/wp-json/v1/booking/distance-check', {client_pc: $(this).val().replace(' ', '')}).done(function () {
 			});
 		})
 

@@ -114,4 +114,20 @@ class BookingController {
 			'data' => $this->response
 		]);
 	}
+
+	public function distanceCheck(WP_REST_Request $request)
+	{
+
+		$getParams = $request->get_params();
+		$client_pc = isset($getParams['client_pc']) ? $getParams['client_pc'] : null;
+		$base_pc = get_option( "woocommerce_store_postcode" );
+		$api_key = env("MAPS_API_KEY");
+
+		$url = "http://maps.googleapis.com/maps/api/distancematrix/json?origins=BS140SA&destinations=BS32LP2&mode=driving&language=en-EN&sensor=false&key=https://maps.googleapis.com/maps/api/distancematrix/json?origins=$base_pc}&destinations=$client_pc&mode=driving&language=en-EN&sensor=false&key=$api_key";
+
+		$data = @file_get_contents(urldecode($url));
+		dd($data);
+
+		$result = json_decode($data, true);
+	}
 }

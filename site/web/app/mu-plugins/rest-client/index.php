@@ -35,5 +35,10 @@ add_action( 'rest_api_init', function () {
 			'method' => 'GET',
 			'callback' => 'get',
 		],
+		[
+			'route' => 'distance-check',
+			'method' => 'GET',
+			'callback' => 'distanceCheck',
+		],
 	]);
 });
