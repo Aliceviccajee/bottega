@@ -1,4 +1,5 @@
 import datepickerFactory from 'jquery-datepicker';
+import debounce from 'lodash.debounce'
 
 export default {
 	init() {
@@ -54,11 +55,13 @@ export default {
 
 		const postcodeInput = $('#postcode');
 
-		postcodeInput.on('blur', function() {
+		function postcodeChecker () {
+			const msg = $('.user-feedback');
+			msg.text('Checking if we can deliver to you...')
+			msg.removeClass('success fail')
 			if (!$(this).val().replace(' ', '')) return;
 			$.get('/index.php/wp-json/v1/booking/distance-check', {client_pc: $(this).val().replace(' ', '')}).done(function (data) {
-				const msg = $('.user-feedback');
-				msg.removeClass(['success', 'fail'])
+
 				if (data.status == 'success') {
 					msg.text(data.miles <= 2 ? 'Great news, we deliver to your area!' : 'Sorry, we aren\'t currently delivering to your area')
 					msg.addClass(data.miles <= 2 ? 'success' : 'fail')
@@ -73,7 +76,8 @@ export default {
 				$('#postcodeLabel').append(msg);
 
 			});
-		})
+		}
+		postcodeInput.on('input', debounce(postcodeChecker, 500))
 
 	},
 	finalize() {
