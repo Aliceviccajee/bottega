@@ -20,7 +20,7 @@ export default {
 						const html = data.data.map(function(time) {
 							return `<option value="${time}">${time}</option>`;
 						})
-						$('#timepicker').html(html);
+						$('#timepicker').html('<option value="">Select a timeslot</option>' + html);
 					});
 				},
 			});

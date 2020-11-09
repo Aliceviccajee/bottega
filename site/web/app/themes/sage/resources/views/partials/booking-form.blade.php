@@ -1,5 +1,5 @@
 <div>
-    <label>Date: <input type="date" id="datepicker"></label>
+    <label>Date: <input type="text" id="datepicker"></label>
     <label>Time:
 			<select id="timepicker"></select>
 		</label>
