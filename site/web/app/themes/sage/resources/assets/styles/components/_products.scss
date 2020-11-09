@@ -36,3 +36,12 @@
     }
 }
 
+.user-feedback {
+	font-size: .8rem;
+	&.success {
+		color: green;
+	}
+	&.fail {
+		color: red;
+	}
+}

@@ -125,7 +125,7 @@ class BookingController {
 
 		$ch = curl_init();
 
-		$url = "https://maps.googleapis.com/maps/api/distancematrix/";
+		$url = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
 		// Array of options to be passed to API<br>
 		$options = array(
@@ -136,9 +136,29 @@ class BookingController {
 				"key" => $api_key
 		);
 		$request = $url . "?" . http_build_query( $options );
+
 		curl_setopt($ch, CURLOPT_URL, $request);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		$output = json_decode(curl_exec($ch), true);
-		dd($output);
+		$output = json_decode(curl_exec($ch));
+
+		try {
+			return collect($output->rows)->reduce(function($response, $row) {
+				if (!isset($row->elements[0]->distance)) {
+					return [
+						'status' => 'invalid',
+					];
+				}
+				$distance = $row->elements[0]->distance;
+				return [
+					'status' => 'success',
+					'miles' => $distance->value * 0.00062137
+				];
+			 }, []);
+		} catch (Exception $e) {
+			return [
+				'status' => 'fail',
+				'miles' => false
+			];
+		}
 	}
 }
