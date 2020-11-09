@@ -3,13 +3,13 @@
 # Define accompanying passwords/secrets in group_vars/development/vault.yml
 
 wordpress_sites:
-  bottega.local:
+  local.bottega:
     site_hosts:
-      - canonical: bottega.local
+      - canonical: local.bottega
         redirects:
-          - www.bottega.local
+          - www.local.bottega
     local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
-    admin_email: admin@bottega.local
+    admin_email: admin@local.bottega
     multisite:
       enabled: false
     ssl:
