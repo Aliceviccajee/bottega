@@ -233,7 +233,7 @@ add_action( 'woocommerce_order_details_before_order_table_items', function($orde
 	$date = get_post_meta( $order_id, '_date_slot', true );
 	$time = get_post_meta( $order_id, '_time_slot', true );
 
-	echo '<div class="js-booking-info">
+	echo '<div class="js-booking-info has-info">
 	<p class="date">Delivery date: '.$date.'</p>
 	<p class="time">Delivery time: '.$time.'</p>
 </div>';

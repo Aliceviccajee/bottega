@@ -41,7 +41,7 @@ export default {
 
 		const bookingInfo = document.querySelector('.js-booking-info');
 
-		if (bookingInfo) {
+		if (bookingInfo && !bookingInfo.hasClass('bookingInfo')) {
 			const date = document.querySelector('.js-booking-info .date');
 			const time = document.querySelector('.js-booking-info .time');
 			date.textContent = date.textContent + ' ' + sessionStorage.getItem('date');
