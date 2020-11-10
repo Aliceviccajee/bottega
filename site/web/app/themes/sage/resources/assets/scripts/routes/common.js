@@ -11,6 +11,10 @@ export default {
 			$('#datepicker').datepicker({
 				dateFormat: 'yy-m-d',
 				minDate: 0,
+				beforeShowDay: function(date) {
+					const day = date.getDay();
+					return [(day != 0 && day != 1 && day != 2 && day != 3)];
+				},
 				onSelect: function () {
 					sessionStorage.setItem('date',this.value);
 					$('#timepicker').html('<option>Checking availability...</option>')
