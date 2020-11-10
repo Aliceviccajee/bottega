@@ -39,9 +39,9 @@ export default {
 			})
 		});
 
-		const bookingInfo = document.querySelector('.js-booking-info');
+		const bookingInfo = $('.js-booking-info')	;
 
-		if (bookingInfo && !bookingInfo.hasClass('bookingInfo')) {
+		if (bookingInfo.length && !bookingInfo.hasClass('has-info')) {
 			const date = document.querySelector('.js-booking-info .date');
 			const time = document.querySelector('.js-booking-info .time');
 			date.textContent = date.textContent + ' ' + sessionStorage.getItem('date');
