@@ -1,0 +1,28 @@
+name: bottega
+recipe: wordpress
+config:
+  webroot: web
+  name: bedrock
+  recipe: wordpress
+  proxy:
+    nginx: # Optional: if you exclude this, Lando will serve it as bedrock.lndo.site
+      - bedrock.test
+    theme: # Optional: add this if you include the Sage specific config down below
+      - localhost:3000
+  config:
+    php: "7.2"
+    via: nginx
+    webroot: web
+    database: mariadb
+    xdebug: true
+
+  # Add the following if you plan to use Sage as a starter theme
+  services:
+    theme:
+      type: node
+      services:
+        ports:
+          - 3000:3000
+  tooling:
+    yarn:
+      service: theme
