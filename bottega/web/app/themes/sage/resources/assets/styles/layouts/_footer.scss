@@ -1,0 +1,16 @@
+footer {
+    background-color: $pink;
+    padding: 3rem 1rem;
+} 
+
+.social {
+    display: flex;
+    justify-content: flex-end;
+    li {
+        list-style: none;
+    }
+    img {
+        max-width: 20px;
+        max-height: 20px;
+    }
+}

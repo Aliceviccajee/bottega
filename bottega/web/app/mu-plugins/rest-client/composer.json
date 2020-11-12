@@ -1,0 +1,29 @@
+{
+	"name": "lunar-build/rest-client",
+	"description": "Reusable REST client for Roots projects.",
+	"version": "0.1",
+	"type": "wordpress-plugin",
+	"license": "proprietary",
+	"authors": [
+		{
+				"name": "Jack Standbridge",
+				"email": "jack@lunar.build",
+				"homepage": "https://lunar.build",
+				"role": "Developer"
+		},
+		{
+			"name": "Kye Buffery",
+			"email": "kye@lunar.build",
+			"homepage": "https://lunar.build",
+			"role": "Developer"
+		}
+	],
+	"config": {
+		"optimize-autoloader": true
+	},
+	"autoload": {
+		"psr-4": {
+				"RestClient\\": ""
+		}
+	}
+}

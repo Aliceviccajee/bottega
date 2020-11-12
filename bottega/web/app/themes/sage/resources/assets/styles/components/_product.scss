@@ -1,0 +1,25 @@
+.single-product {
+    height: 100%;
+    background-color: aliceblue;
+    header {
+        text-align: center;
+    }
+    .cart {
+        .button {
+            background-color: $primary-blue !important;
+            margin-left: 1rem !important;
+        }
+    }
+    .byline {
+        display: none;
+    }
+    .updated {
+        display: none;
+    }
+    .related .products {
+        display: none;
+    }
+    h2 {
+        display: none;
+    }
+}
