@@ -10,7 +10,6 @@
 	.booking-fields {
 			display: grid;
 			grid-template-columns: 1;
-			justify-items: center;
 	}
 }
 
@@ -26,6 +25,11 @@
 	text-align: center;
 	a {
 		margin: 0 10px;
+		background: $primary-blue;
+		color: $white;
 		cursor: pointer;
+		span {
+			padding: 3px;
+		}
 	}
 }
