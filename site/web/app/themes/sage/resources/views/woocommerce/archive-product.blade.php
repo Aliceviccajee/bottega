@@ -26,7 +26,7 @@ $products = $query->get_products();
 
 	@php
 		do_action('woocommerce_archive_description');
-		@endphp
+	@endphp
 </header>
 
 	<div class="menu">
@@ -39,6 +39,5 @@ $products = $query->get_products();
 	@php
 		do_action('woocommerce_after_main_content');
 	@endphp
-	@endsection
 </div>
 @endsection
