@@ -3,6 +3,10 @@
     justify-content: center;
 		width: 100%;
 		margin-top: 2rem;
+		h1 {
+			font-family: $logo;
+			color: $green;
+		}
 }
 
 .woocommerce-products-header {
