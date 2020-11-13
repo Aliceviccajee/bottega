@@ -1,4 +1,4 @@
-<div class="booking">
+<div class="booking" id="menu">
 	<div>
 		<div class="booking-text">
 			<p>Please enter your postcode to see if we deliver to you</p>

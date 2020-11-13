@@ -9,13 +9,15 @@ html {
 }
 
 .btn {
-	color: $white;
+	color: $green;
 	text-decoration: none;
-	background: $grey;
+	background: $white;
+	border: 1px solid $grey;
 	padding: 10px 40px;
 	border-radius: 45px;
 	&:hover {
 		background: $green;
-		padding: 12px 44px;
+		color: $white;
+		border: 2px solid $green;
 	}
 }

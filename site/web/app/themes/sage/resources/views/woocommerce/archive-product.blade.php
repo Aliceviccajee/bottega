@@ -13,7 +13,7 @@ $products = $query->get_products();
 @include('partials.page-header')
 @include('partials.booking-form')
 
-<div class="menu" id="menu">
+<div class="menu">
 	@php
 		do_action('get_header', 'shop');
 		do_action('woocommerce_before_main_content');
