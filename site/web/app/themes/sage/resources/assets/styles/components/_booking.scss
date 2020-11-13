@@ -1,0 +1,35 @@
+.booking {
+	padding: 3rem 0 12rem 0;
+	background-color: $green;
+	color: $white;
+	display: flex;
+	justify-content: center;
+	.booking-text {
+		text-align: center;
+	}
+	.booking-fields {
+			display: grid;
+			grid-template-columns: 1;
+	}
+}
+
+.ui-datepicker-calendar {
+	background: $white;
+	padding: 0 10px 10px 10px;
+	opacity: 100%;
+}
+.ui-datepicker {
+	background: $white;
+}
+.ui-datepicker-header {
+	text-align: center;
+	a {
+		margin: 0 10px;
+		background: $primary-blue;
+		color: $white;
+		cursor: pointer;
+		span {
+			padding: 3px;
+		}
+	}
+}

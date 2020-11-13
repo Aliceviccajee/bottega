@@ -1,14 +1,13 @@
-
 .wrapper-hero {
-    background-color: $pink;
-    background-size: cover;
-    width: 100%;
-    height: 80vh;
-    .hero-text {
+	.hero-text {
+				padding: 12rem 0 8rem 0;
+				background: url('../../images/stripes.jpg') no-repeat center center fixed;
+				background-size: cover;
         text-align: center;
-        color: $white;
+        color: $green;
         h1 {
-            font-family: $lobster;
+						margin: 0;
+            font-family: $logo;
             font-size: 8rem;
         }
         p {
@@ -17,28 +16,32 @@
         }
     }
 }
+
 .header {
-    .container {
-        display: flex;
-        justify-content: flex-end;
-        background-color: blueviolet;
-        .nav { 
-            display: flex;
-            li {
-                margin: 0 20px;
-                list-style: none;
-                a {
-                    color: $white;
-                    font-family: $body-font;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    padding: 1rem;
-                    &:hover {
-                        color: $primary-blue;
-                    }
-                }
-            }   
-        }
-    }
+	position: fixed;
+	z-index: 5;
+	width: 100%;
+	.container {
+		display: flex;
+		justify-content: flex-end;
+		background-color: $yellow;
+			.nav {
+			display: flex;
+				li {
+				margin: 0 20px;
+				list-style: none;
+				a {
+				color: $green;
+				font-family: $body-font;
+				text-transform: uppercase;
+				text-decoration: none;
+				padding: 1rem;
+					&:hover {
+						color: $primary-blue;
+					}
+				}
+			}
+		}
+	}
 }
 

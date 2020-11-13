@@ -1,9 +1,11 @@
 /** Colors */
 
-    $primary-blue: #012A52;
-    $white: #ffffff;
-    $black: #000000;
+    $primary-blue: #1e2d50;
+    $white: #f8f8eb;
+    $grey: #373741;
+    $yellow: #f5e68c;
     $pink: #FA9FBA;
+    $green: #00504b;
 
 /** Breakpoints  */
     $max-width: 1500px;
@@ -26,6 +28,13 @@
         src: url('../fonts/Poppins/Poppins-ExtraLight.ttf') format('truetype');
     }
 
+		@font-face {
+        font-family: 'Heubeul';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/Heubeul.otf') format('truetype');
+    }
+
     @font-face {
         font-family: 'Poppins-bold';
         font-style: normal;
@@ -42,5 +51,6 @@
 
     $body-font: 'Poppins', sans-serif;
     $lobster: 'Lobster', sans-serif;
-    $body-bold: 'Poppins-bold', sans-serif;
+		$body-bold: 'Poppins-bold', sans-serif;
+		$logo: 'Heubeul', sans-serif;
 
