@@ -7,3 +7,15 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.btn {
+	color: $white;
+	text-decoration: none;
+	background: $grey;
+	padding: 10px 40px;
+	border-radius: 45px;
+	&:hover {
+		background: $green;
+		padding: 12px 44px;
+	}
+}

@@ -1,20 +1,20 @@
 .wrapper-hero {
 	.hero-text {
-				padding: 12rem 0 8rem 0;
-				background: url('../../images/stripes.jpg') no-repeat center center fixed;
-				background-size: cover;
-        text-align: center;
-        color: $green;
-        h1 {
-						margin: 0;
-            font-family: $logo;
-            font-size: 8rem;
-        }
-        p {
-            font-size: 1rem;
-            text-transform: uppercase;
-        }
-    }
+		padding: 12rem 0 8rem 0;
+		background: url('../../images/stripes.jpg') no-repeat center center fixed;
+		background-size: cover;
+		text-align: center;
+		color: $green;
+		h1 {
+			margin: 0;
+			font-family: $logo;
+			font-size: 8rem;
+		}
+		p {
+			font-size: 1rem;
+			text-transform: uppercase;
+		}
+	}
 }
 
 .header {
@@ -24,20 +24,20 @@
 	.container {
 		display: flex;
 		justify-content: flex-end;
-		background-color: $yellow;
-			.nav {
+		background-color: $green;
+		.nav {
 			display: flex;
-				li {
+			li {
 				margin: 0 20px;
 				list-style: none;
 				a {
-				color: $green;
-				font-family: $body-font;
-				text-transform: uppercase;
-				text-decoration: none;
-				padding: 1rem;
+					color: $white;
+					font-family: $body-font;
+					text-transform: uppercase;
+					text-decoration: none;
+					padding: 1rem;
 					&:hover {
-						color: $primary-blue;
+					color: $primary-blue;
 					}
 				}
 			}

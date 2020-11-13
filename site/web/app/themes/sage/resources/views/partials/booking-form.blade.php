@@ -9,7 +9,7 @@
 			<label>Time:
 				<select id="timepicker"></select>
 			</label>
-			<label id="postcodeLabel">Postcode: <input type="text" id="postcode"> <span class="user-feedback"></span></label>
+			<label id="postcodeLabel">Postcode: <input type="text" id="postcode"><span class="user-feedback"></span></label>
 	</div>
 	</div>
 </div>

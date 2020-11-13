@@ -1,7 +1,7 @@
 .booking {
 	padding: 3rem 0 12rem 0;
-	background-color: $green;
-	color: $white;
+	background-color: $yellow;
+	color: $green;
 	display: flex;
 	justify-content: center;
 	.booking-text {
@@ -9,9 +9,20 @@
 	}
 	.booking-fields {
 			display: grid;
-			grid-template-columns: 1;
-	}
+			grid-template-rows: 33% 33% 33%;
+			label {
+				margin-top: 20px;
+				display: grid;
+				grid-template-columns: 50% 50%;
+				span {
+					color: $primary-blue;
+					background: $white;
+
+				}
+			}
+		}
 }
+
 
 .ui-datepicker-calendar {
 	background: $white;
