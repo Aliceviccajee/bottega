@@ -11,6 +11,8 @@ $products = $query->get_products();
 
 @section('content')
 @include('partials.page-header')
+@include('partials.booking-form')
+
 @php
 	do_action('get_header', 'shop');
 	do_action('woocommerce_before_main_content');
