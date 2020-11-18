@@ -1,16 +1,25 @@
 footer {
-    background-color: $yellow;
-    padding: 3rem 1rem;
-}
-
-.social {
-    display: flex;
-    justify-content: flex-end;
-    li {
-        list-style: none;
-    }
-    img {
-        max-width: 20px;
-        max-height: 20px;
-    }
+	background-color: $yellow;
+	padding: 3rem 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.logo {
+		font-family: $logo;
+		color: $green;
+		padding-bottom: 10px;
+	}
+	.social {
+		padding: 0;
+		display: flex;
+		justify-content: space-evenly;
+		li {
+			padding: 0 15px;
+			list-style: none;
+		}
+		img {
+			max-width: 35px;
+			max-height: 35px;
+		}
+	}
 }
