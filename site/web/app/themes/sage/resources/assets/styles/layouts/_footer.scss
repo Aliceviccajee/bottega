@@ -7,7 +7,9 @@ footer {
 	.logo {
 		font-family: $logo;
 		color: $green;
-		padding-bottom: 10px;
+		h2 {
+			font-size: 40px;
+		}
 	}
 	.social {
 		padding: 0;

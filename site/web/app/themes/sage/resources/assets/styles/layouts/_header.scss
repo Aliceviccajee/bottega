@@ -7,12 +7,18 @@
 		color: $green;
 		h1 {
 			margin: 0;
+			font-size: 4em;
 			font-family: $logo;
-			font-size: 8rem;
+			@media (min-width: $breakpoint-sm) {
+				font-size: 8rem;
+			}
 		}
-		p {
-			font-size: 1rem;
+		h2 {
+			font-size: 1.2em;
 			text-transform: uppercase;
+			@media (min-width: $breakpoint-sm) {
+				font-size: 1.7rem;
+			}
 		}
 		div	{
 			margin-top: 3rem;
@@ -29,25 +35,35 @@
 	width: 100%;
 	.container {
 		display: flex;
-		justify-content: flex-end;
 		background-color: $green;
+		justify-content: center;
+		@media (min-width: $breakpoint-sm) {
+			justify-content: flex-end;
+		}
 		.nav {
 			display: flex;
 			align-items: center;
 			ul {
 				padding: 0;
+				display: flex;
+				justify-content: center;
 			}
 			li {
 				margin: 0 20px;
 				list-style: none;
+				padding: 10px;
 				a {
 					color: $white;
 					font-family: $body-font;
 					text-transform: uppercase;
 					text-decoration: none;
-					padding: 1rem;
+					@media (min-width: $breakpoint-sm) {
+						padding: 5px 30px;
+					}
 					&:hover {
-					color: $primary-blue;
+						color: $primary-blue;
+						background: $white;
+						border-radius: 25px;
 					}
 				}
 			}
