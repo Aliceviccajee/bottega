@@ -1,0 +1,17 @@
+.woocommerce-form-coupon-toggle {
+	display: none;
+}
+.woocommerce {
+	margin: 0 !important;
+	margin: 0 3em;
+	@media (min-width: $breakpoint-sm) {
+		padding: 3em 6em;
+	}
+}
+@media (max-width: $breakpoint-sm) {
+.checkout {
+	div {
+			padding: 0 8px 0 4px;
+		}
+	}
+}
