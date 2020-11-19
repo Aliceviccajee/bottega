@@ -11,7 +11,7 @@
 		padding: 1em;
 	}
 }
-.ceckout {
+.woocommerce-cart-form {
 	background: $white;
 	margin: 2em 0 3em 0;
 	a {
@@ -21,6 +21,8 @@
 	.coupon {
 		display: none;
 	}
+}
+.wc-proceed-to-checkout {
 	.button {
 		background: $light-green !important;
 		padding: 15px !important;
