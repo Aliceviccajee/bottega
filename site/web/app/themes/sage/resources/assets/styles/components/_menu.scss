@@ -32,17 +32,29 @@
 	}
 	h1 {
 		text-align: center;
-		padding-bottom: 2em;
+		padding-bottom: 1.5em;
 		font-family: $logo;
 		color: $green;
 	}
 	.product-card {
-		margin: 1rem 0;
+		margin-bottom: 4em;
 		display: grid;
 		justify-content: center;
 		grid-template-columns: 100%;
 		@media (min-width: $breakpoint-sm) {
 			grid-template-columns: 50% 50%;
+		}
+		h4 {
+			font-family: $logo;
+			color: $green;
+			font-size: 22px;
+			margin-bottom: 0;
+		}
+		p {
+			margin: 0;
+		}
+		a {
+			margin-top: 15px;
 		}
 	}
 	.product-image {
@@ -58,11 +70,11 @@
 }
 
 .user-feedback {
-font-size: .8rem;
-&.success {
-color: green;
-}
-&.fail {
-color: red;
-}
+	font-size: .8rem;
+	&.success {
+		color: green;
+	}
+	&.fail {
+		color: red;
+	}
 }
