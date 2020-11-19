@@ -1,8 +1,9 @@
-<div class="booking" id="menu">
+<div class="booking" id="booking">
 	<div>
 		<div class="booking-text">
-			<p>Please enter your postcode to see if we deliver to you</p>
-			<p>Please select a time and date for your delivery</p>
+			<p>Before you order, check to see if we deliver to you</p>
+			<p>Also book a delivery slot</p>
+			<p>Not quite ready? You can still check out the menu <a href="#menu">here</a></p>
 		</div>
 		<div class="booking-fields">
 			<label>Date: <input type="text" id="datepicker"></label>

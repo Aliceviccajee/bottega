@@ -1,0 +1,39 @@
+.cart {
+	color: $green;
+	.content {
+		display: flex;
+		justify-content: center;
+		font-size: 25px;
+		margin-top: 1em;
+	}
+	.booking-details {
+		background: $white;
+		padding: 1em;
+	}
+}
+.woocommerce {
+	background: $white;
+	margin: 2em 0 3em 0;
+	a {
+		text-decoration: none;
+		color: $green;
+	}
+	.coupon {
+		display: none;
+	}
+	.button {
+		background: $light-green !important;
+		padding: 15px !important;
+		margin-top: 15px !important;
+		font-size: 20px !important;
+		&:hover {
+			color: $white !important;
+			background: $green !important;
+		}
+	}
+	@media (max-width: $breakpoint-sm) {
+		.wc-proceed-to-checkout {
+			padding: 0 1em;
+		}
+	}
+}

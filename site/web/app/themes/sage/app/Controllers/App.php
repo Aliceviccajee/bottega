@@ -62,5 +62,7 @@ class App extends Controller
         if ( $width === '100%' ) {
             return '100vw, (min-width: 1440px) 1440px, (min-width: 1024px) 1024px, (min-width: 768px) 768px';
         }
-    }
+		}
+
+
 }

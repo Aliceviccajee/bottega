@@ -11,6 +11,7 @@ $products = $query->get_products();
 
 @section('content')
 @include('partials.page-header')
+@include('partials.about-us')
 @include('partials.booking-form')
 
 <div class="menu">
@@ -29,7 +30,7 @@ $products = $query->get_products();
 		@endphp
 	</header>
 
-		<div class="menu">
+		<div id="menu" class="menu">
 		<div class="products">
 			<h1>Menu</h1>
 			@foreach ($products as $product)
