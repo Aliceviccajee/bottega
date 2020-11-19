@@ -1,65 +1,68 @@
 .menu {
-    display: flex;
-    justify-content: center;
-		width: 100%;
-		margin-top: 2rem;
-		h1 {
-			font-family: $logo;
-			color: $green;
-		}
+	display: flex;
+	justify-content: center;
+	width: 100%;
 }
 
 .woocommerce-products-header {
-    text-align: center;
+	text-align: center;
 }
 
 .products {
-		position: relative;
-		overflow: auto;
-		width: 100%;
-		&::after {
-			display: block !important;
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 10;
-			background-color: white;
-			opacity: 0.7;
-		}
+	position: relative;
+	padding: 2em;
+	background: $white;
+	overflow: auto;
+	width: 100%;
+	// &::after {
+	// 	display: block !important;
+	// 	content: '';
+	// 	position: absolute;
+	// 	top: 0;
+	// 	right: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	z-index: 10;
+	// 	background-color: white;
+	// 	opacity: 0.7;
+// }
 
-		&.enabled::after {
-			display: none !important;
+	&.enabled::after {
+		display: none !important;
+	}
+	h1 {
+		text-align: center;
+		padding-bottom: 2em;
+		font-family: $logo;
+		color: $green;
+	}
+	.product-card {
+		margin: 1rem 0;
+		display: grid;
+		justify-content: center;
+		grid-template-columns: 100%;
+		@media (min-width: $breakpoint-sm) {
+			grid-template-columns: 50% 50%;
 		}
-    .product-card {
-        margin: 1rem 0;
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
+	}
+	.product-image {
+		display: flex;
+		justify-content: center;
+		img {
+			@media (max-width: $breakpoint-sm) {
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+	}
 }
 
 .user-feedback {
-	font-size: .8rem;
-	&.success {
-		color: green;
-	}
-	&.fail {
-		color: red;
-	}
+font-size: .8rem;
+&.success {
+color: green;
 }
-
-// .add_to_cart_button {
-// 	color: $green !important;
-// 	text-decoration: none !important;
-// 	background: $white !important;
-// 	border: 1px solid $grey !important;;
-// 	padding: 10px 40px !important;;
-// 	border-radius: 45px !important;;
-// 	&:hover {
-// 		background: $green !important;;
-// 		color: $white !important;;
-// 		border: 2px solid $green !important;;
-// 	}
-// }
+&.fail {
+color: red;
+}
+}

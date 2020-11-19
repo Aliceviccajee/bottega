@@ -1,11 +1,16 @@
 .booking {
-	padding: 3rem 0 12rem 0;
 	background-color: $yellow;
+	padding: 3rem 3em 6em 3em;
 	color: $green;
 	display: flex;
 	justify-content: center;
+	@media (min-width: $breakpoint-sm) {
+		padding: 4em 4em 6em 4em;
+	}
 	.booking-text {
+		font-size: 20px;
 		text-align: center;
+		font-family: $bold;
 	}
 	.booking-fields {
 			display: grid;
@@ -17,12 +22,10 @@
 				span {
 					color: $primary-blue;
 					background: $white;
-
 				}
 			}
 		}
 }
-
 
 .ui-datepicker-calendar {
 	background: $white;

@@ -22,7 +22,6 @@ $products = $query->get_products();
 
 	<header class="woocommerce-products-header">
 		@if(apply_filters('woocommerce_show_page_title', true))
-		<h1>Menu</h1>
 		@endif
 
 		@php
@@ -32,6 +31,7 @@ $products = $query->get_products();
 
 		<div class="menu">
 		<div class="products">
+			<h1>Menu</h1>
 			@foreach ($products as $product)
 				@include('partials.product', ['product' => $product])
 			@endforeach
