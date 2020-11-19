@@ -1,10 +1,13 @@
 .wrapper-hero {
 	.hero-text {
-		padding: 12rem 0 8rem 0;
+		padding: 6rem 0 8rem 0;
 		background: url('../../images/stripes.jpg') no-repeat center center fixed;
 		background-size: cover;
 		text-align: center;
 		color: $green;
+		@media (min-width: $breakpoint-sm) {
+			padding: 12rem 0 8rem 0;
+		}
 		h1 {
 			margin: 0;
 			font-size: 4em;
@@ -35,10 +38,7 @@
 	.container {
 		display: flex;
 		background-color: $green;
-		justify-content: center;
-		@media (min-width: $breakpoint-sm) {
-			justify-content: space-between;
-		}
+		justify-content: space-between;
 		.nav {
 			justify-self: end;
 			display: flex;
@@ -73,8 +73,12 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding-left: 30px;
 		font-family: $logo;
+		padding-left: 20px;
+
+		@media (min-width: $breakpoint-sm) {
+			padding-left: 30px;
+		}
 		a {
 			color: $white;
 			font-size: 40px;
