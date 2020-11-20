@@ -93,9 +93,18 @@ add_filter('comments_template', function ($comments_template) {
 
 // Hook in
 add_filter( 'woocommerce_checkout_fields' , function ( $fields ) {
+		$fields['billing']['billing_first_name']['label'] = 'Name';
+		$fields['shipping']['shipping_first_name']['label'] = 'Name';
+		unset($fields['billing']['billing_city']);
+		unset($fields['billing']['billing_state']);
+		unset($fields['billing']['billing_country']);
+    unset($fields['billing']['billing_last_name']);
     unset($fields['billing']['billing_company']);
     unset($fields['billing']['county']);
-    unset($fields['shipping']['shipping_company']);
-    unset($fields['shipping']['county']);
+		unset($fields['shipping']['shipping_company']);
+    unset($fields['shipping']['shipping_last_name']);
+		unset($fields['shipping']['county']);
+		unset($fields['shipping']['shipping_state']);
+		unset($fields['shipping']['shipping_country']);
     return $fields;
 });
