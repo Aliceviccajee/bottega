@@ -7,13 +7,18 @@
 		margin-top: 1em;
 	}
 	.booking-details {
-		background: $white;
+		background: $green;
+		color: $white;
 		padding: 1em;
+		margin-top: 1em;
 	}
 }
 .woocommerce-cart-form {
 	background: $white;
 	margin: 2em 0 3em 0;
+	@media (max-width: $breakpoint-sm) {
+		margin: 2em 1em;
+	}
 	a {
 		text-decoration: none;
 		color: $green;
@@ -33,9 +38,10 @@
 			background: $green !important;
 		}
 	}
-	@media (max-width: $breakpoint-sm) {
-		.wc-proceed-to-checkout {
-			padding: 0 1em;
-		}
+}
+@media (max-width: $breakpoint-sm) {
+	.wc-proceed-to-checkout {
+		padding: 1em;
+		margin: 1em;
 	}
 }

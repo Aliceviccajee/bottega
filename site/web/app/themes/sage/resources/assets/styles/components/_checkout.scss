@@ -1,19 +1,20 @@
 .woocommerce-form-coupon-toggle {
 	display: none;
 }
-.cart {
-	.content {
-		margin: 0 !important;
-		margin: 0 3em;
-		@media (min-width: $breakpoint-sm) {
-			padding: 3em 6em;
-		}
+.woocommerce-checkout {
+	h3 {
+		text-align: center;
+		font-family: $logo;
+		font-size: 22px;
+		color: $green;
+	}
+	.woocommerce-checkout-review-order {
+		padding: 2em;
 	}
 }
-@media (max-width: $breakpoint-sm) {
 .checkout {
-	div {
-			padding: 0 8px 0 4px;
-		}
+	.col2-set {
+		width: 90% !important;
+		padding: 2em;
 	}
 }
