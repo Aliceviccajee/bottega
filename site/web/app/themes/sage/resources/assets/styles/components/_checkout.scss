@@ -14,7 +14,10 @@
 }
 .checkout {
 	.col2-set {
-		width: 90% !important;
-		padding: 2em;
+		padding: 20px;
+		width: 85% !important;
+		@media (min-width: $breakpoint-sm) {
+			padding: 2em;
+		}
 	}
 }
