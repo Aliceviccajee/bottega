@@ -3,7 +3,7 @@
 # Define accompanying passwords/secrets in group_vars/production/vault.yml
 
 wordpress_sites:
-  example.com:
+  bottegapizza.co.uk:
     site_hosts:
       - canonical: bottegapizza.co.uk
         redirects:
