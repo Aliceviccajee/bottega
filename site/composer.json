@@ -71,13 +71,12 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "advanced-custom-fields/advanced-custom-fields-pro", "woocommerce/woocommerce", "wpackagist-plugin/woocommerce-gateway-stripe"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
-		"wordpress-install-dir": "web/wp",
-		"installer-disable": true
-  },
+		"wordpress-install-dir": "web/wp"
+	},
   "scripts": {
     "post-root-package-install": [
       "php -r \"copy('.env.example', '.env');\""
