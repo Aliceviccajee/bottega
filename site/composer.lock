@@ -4,8 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2e599dc2cd055c6f158c459a199ddccf",
+    "content-hash": "a53ad6a49faeaacbcad4d65514fe9fe6",
     "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.9.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k={%ACF_PRO_KEY}&t=5.9.1"
+            },
+            "require": {
+                "composer/installers": "^1.4",
+                "ffraenz/private-composer-installer": "^2.0"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "automattic/jetpack-autoloader",
             "version": "v2.2.0",
@@ -285,6 +298,61 @@
                 }
             ],
             "time": "2020-05-29T15:13:26+00:00"
+        },
+        {
+            "name": "ffraenz/private-composer-installer",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ffraenz/private-composer-installer.git",
+                "reference": "dc54b0200952f8c03a08b5593a933c308343a2a9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ffraenz/private-composer-installer/zipball/dc54b0200952f8c03a08b5593a933c308343a2a9",
+                "reference": "dc54b0200952f8c03a08b5593a933c308343a2a9",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0.0",
+                "php": "^5.6 || ^7.0",
+                "vlucas/phpdotenv": "^3.0"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "phpunit/phpunit": "5.7.* || ^6.3",
+                "zendframework/zend-coding-standard": "^1.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "FFraenz\\PrivateComposerInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "FFraenz\\PrivateComposerInstaller\\": "src/PrivateComposerInstaller"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fränz Friederes",
+                    "email": "fraenz@frieder.es",
+                    "homepage": "https://fraenz.frieder.es"
+                }
+            ],
+            "description": "A composer install helper for private packages",
+            "keywords": [
+                "composer",
+                "env",
+                "plugin",
+                "private",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2019-01-30T21:44:48+00:00"
         },
         {
             "name": "maxmind-db/reader",
@@ -1236,6 +1304,24 @@
                 "woocommerce"
             ],
             "time": "2020-09-15T12:10:40+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/woocommerce-gateway-stripe",
+            "version": "4.5.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/woocommerce-gateway-stripe/",
+                "reference": "tags/4.5.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/woocommerce-gateway-stripe.4.5.5.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/woocommerce-gateway-stripe/"
         }
     ],
     "packages-dev": [
