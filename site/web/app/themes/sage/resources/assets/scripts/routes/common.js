@@ -13,7 +13,9 @@ export default {
 				minDate: 0,
 				beforeShowDay: function(date) {
 					const day = date.getDay();
-					return [(day != 0 && day != 1 && day != 2 && day != 3)];
+					const curDate = $.datepicker.formatDate('yy-mm-dd', date);
+
+					return [(day != 0 && day != 1 && day != 2 && day != 3 && curDate !== '2020-11-26')];
 				},
 				onSelect: function () {
 					sessionStorage.setItem('date',this.value);
