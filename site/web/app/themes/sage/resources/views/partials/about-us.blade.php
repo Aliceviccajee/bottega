@@ -11,7 +11,7 @@
 			<div class="card-info">
 				<h4>{{$row['title']}}</h4>
 				<p>{{$row['paragraph']}}</p>
-				<p>{{$row['paragraph-two']}}</p>
+				<p>{{$row['paragraph_two']}}</p>
 			</div>
 		</div>
 	@endforeach
