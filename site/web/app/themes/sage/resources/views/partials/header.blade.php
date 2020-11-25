@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
 		<div class="logo">
-			<a href="#">B</a>
+			<a href="https://bottegapizza.co.uk/">B</a>
 		</div>
     <nav class="nav">
 			@if (has_nav_menu('primary_navigation'))
