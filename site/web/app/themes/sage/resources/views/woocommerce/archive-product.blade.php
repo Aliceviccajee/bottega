@@ -1,7 +1,7 @@
 @php
 $query = new WC_Product_Query( array(
-    'orderby' => 'date',
-    'order' => 'DESC',
+    'orderby' => 'menu_order',
+    'order' => 'ASC',
     'return' => 'objects',
 ) );
 $products = $query->get_products();
