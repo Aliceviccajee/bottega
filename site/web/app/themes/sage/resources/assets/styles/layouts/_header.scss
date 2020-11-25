@@ -59,11 +59,11 @@
 					text-decoration: none;
 					@media (min-width: $breakpoint-sm) {
 						padding: 5px 30px;
-					}
-					&:hover {
-						color: $primary-blue;
-						background: $white;
-						border-radius: 25px;
+						&:hover {
+							color: $primary-blue;
+							background: $white;
+							border-radius: 25px;
+						}
 					}
 				}
 			}
