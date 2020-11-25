@@ -39,14 +39,13 @@
 		}
 	}
 }
-@media (max-width: $breakpoint-sm) {
-	.wc-proceed-to-checkout {
-		padding: 1em;
-		margin: 1em;
-	}
-}
-
 .woocommerce-notices-wrapper {
 	margin: 1em;
 }
-
+.cart_totals {
+	margin: 1em;
+  width: 85%;
+}
+.woocommerce-shipping-destination, .woocommerce-shipping-calculator {
+	display: none;
+}
