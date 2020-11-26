@@ -59,7 +59,7 @@
 					text-decoration: none;
 					@media (min-width: $breakpoint-sm) {
 						padding: 5px 30px;
-						&:hover {
+						&:hover  {
 							color: $primary-blue;
 							background: $white;
 							border-radius: 25px;
@@ -69,20 +69,29 @@
 			}
 		}
 	}
-	.logo {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-family: $logo;
-		padding-left: 20px;
-
-		@media (min-width: $breakpoint-sm) {
-			padding-left: 30px;
-		}
-		a {
-			color: $white;
-			font-size: 40px;
-		}
+}
+.current_page_item {
+	a {
+		color: $primary-blue !important;
+		background: $white;
+		padding: 5px 30px;
+		border-radius: 25px;
 	}
 }
+.logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: $logo;
+	padding-left: 20px;
+
+	@media (min-width: $breakpoint-sm) {
+		padding-left: 30px;
+	}
+	a {
+		color: $white;
+		font-size: 40px;
+	}
+}
+
 

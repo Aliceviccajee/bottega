@@ -67,9 +67,11 @@
 		display: flex;
 		justify-content: center;
 		img {
-			@media (max-width: $breakpoint-sm) {
-				object-fit: cover;
-				width: 100%;
+			width: 335px;
+			height: 335px;
+			object-fit: cover;
+			@media (min-width: $breakpoint-sm) {
+				width: 60%;
 			}
 		}
 	}
