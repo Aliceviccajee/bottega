@@ -75,9 +75,9 @@ export default {
 			$.get('/index.php/wp-json/v1/booking/distance-check', {client_pc: $(this).val().replace(' ', '')}).done(function (data) {
 
 				if (data.status == 'success') {
-					msg.text(data.miles <= 3 ? 'We deliver to your area!' : 'Sorry, we aren\'t currently delivering to your area')
-					msg.addClass(data.miles <= 3 ? 'success' : 'fail')
-					isPostCodeValid = data.miles <= 3;
+					msg.text(data.miles <= 4 ? 'We deliver to your area!' : 'Sorry, we aren\'t currently delivering to your area')
+					msg.addClass(data.miles <= 4 ? 'success' : 'fail')
+					isPostCodeValid = data.miles <= 4;
 				} else if (data.status == 'invalid') {
 					msg.text('Please enter a valid full postcode')
 					msg.addClass('fail')
