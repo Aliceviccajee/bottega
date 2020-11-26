@@ -6,11 +6,11 @@
 			<p>Not quite ready? You can still check out the menu <a href="#menu">here</a></p>
 		</div>
 		<div class="booking-fields">
-			<label id="postcodeLabel">Postcode: <input type="text" id="postcode"><span class="user-feedback"></span></label>
 			<label>Date: <input type="text" id="datepicker"></label>
 			<label>Time:
 				<select id="timepicker"></select>
 			</label>
+			<label id="postcodeLabel">Postcode: <input type="text" id="postcode"><span class="user-feedback"></span></label>
 		</div>
 		<div class="button-container">
 			<a class="button" href="#menu">Menu</a>

@@ -2,8 +2,6 @@
 	background-color: $yellow;
 	padding: 3rem 3em 10em 3em;
 	color: $green;
-	display: flex;
-	justify-content: center;
 	@media (min-width: $breakpoint-sm) {
 		padding: 4em 4em 10em 4em;
 	}
@@ -18,11 +16,11 @@
 	}
 	.booking-fields {
 			display: grid;
-			grid-template-rows: 33% 33% 33%;
+			justify-content: center;
 			label {
 				margin-top: 20px;
 				display: grid;
-				grid-template-columns: 50% 50%;
+				grid-template-columns: 40% 60%;
 				span {
 					color: $primary-blue;
 					background: $white;
