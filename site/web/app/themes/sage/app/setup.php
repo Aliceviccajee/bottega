@@ -238,3 +238,19 @@ add_action( 'woocommerce_order_details_before_order_table_items', function($orde
 	<p class="time">Delivery time: '.$time.'</p>
 </div>';
 }, 99, 3 );
+
+add_action('woocommerce_order_item_meta_end', function ($item_id, $item, $order){
+	// compatibility with WC +3
+	$order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
+
+	$output = '';
+	$date_slot = get_post_meta( $order_id, '_date_slot', true );
+
+	if ( !empty($date_slot) )
+			$output .= '<div><strong>' . __( "Date:", "woocommerce" ) . '</strong> <span class="text">' . $date_slot . '</span></div>';
+	if ( !empty($time_slot) )
+			$output .= '<div><strong>' . __( "Time:", "woocommerce" ) . '</strong> <span class="text">' . $time_slot . '</span></div>';
+
+	echo $output;
+
+}, 10, 3);
