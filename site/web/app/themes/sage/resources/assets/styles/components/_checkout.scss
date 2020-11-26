@@ -24,6 +24,23 @@
 .woocommerce-order {
 	margin: 2em;
 	p {
-		font-size: 22px;
+		font-size: 18px;
+	}
+	h2 {
+		font-family: $logo;
+		color: $green;
+	}
+	.time{
+		padding-bottom: 1em;
+	}
+	.woocommerce-columns {
+		padding: 0;
+		margin-bottom: 3em;
+		.woocommerce-column--1 {
+			padding-right: 1em;
+			@media (min-width: $breakpoint-sm) {
+				width: 40%;
+			}
+		}
 	}
 }
