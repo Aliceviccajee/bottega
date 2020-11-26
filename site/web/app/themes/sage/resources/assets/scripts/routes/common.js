@@ -77,7 +77,7 @@ export default {
 				if (data.status == 'success') {
 					msg.text(data.miles <= 2 ? 'We deliver to your area!' : 'Sorry, we aren\'t currently delivering to your area')
 					msg.addClass(data.miles <= 2 ? 'success' : 'fail')
-					isPostCodeValid = true;
+					isPostCodeValid = data.miles <= 2;
 				} else if (data.status == 'invalid') {
 					msg.text('Please enter a valid full postcode')
 					msg.addClass('fail')
