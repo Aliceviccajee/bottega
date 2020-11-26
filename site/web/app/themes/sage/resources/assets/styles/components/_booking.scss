@@ -51,3 +51,16 @@
 		}
 	}
 }
+
+.button-container {
+	display: flex;
+	justify-content: center;
+	padding-top: 3em;
+	.button {
+		background: $green !important;
+		color: $yellow !important;
+		&:hover {
+			background: $light-green !important;
+		}
+	}
+}
