@@ -208,6 +208,7 @@ add_action('woocommerce_email_customer_details', function( $order, $sent_to_admi
 
 	$output = '';
 	$date_slot = get_post_meta( $order_id, '_date_slot', true );
+	$time_slot = get_post_meta( $order_id, '_time_slot', true );
 
 	if ( !empty($date_slot) )
 			$output .= '<div><strong>' . __( "Date:", "woocommerce" ) . '</strong> <span class="text">' . $date_slot . '</span></div>';
@@ -245,6 +246,7 @@ add_action('woocommerce_order_item_meta_end', function ($item_id, $item, $order)
 
 	$output = '';
 	$date_slot = get_post_meta( $order_id, '_date_slot', true );
+	$time_slot = get_post_meta( $order_id, '_time_slot', true );
 
 	if ( !empty($date_slot) )
 			$output .= '<div><strong>' . __( "Date:", "woocommerce" ) . '</strong> <span class="text">' . $date_slot . '</span></div>';
