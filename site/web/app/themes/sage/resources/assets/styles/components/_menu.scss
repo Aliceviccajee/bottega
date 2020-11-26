@@ -70,9 +70,6 @@
 			width: 335px;
 			height: 335px;
 			object-fit: cover;
-			@media (min-width: $breakpoint-sm) {
-				width: 60%;
-			}
 		}
 	}
 }
