@@ -11,6 +11,9 @@
 			<label>Time:
 				<select id="timepicker"></select>
 			</label>
-	</div>
+		</div>
+		<div class="button-container">
+			<a class="button" href="#menu">Menu</a>
+		</div>
 	</div>
 </div>

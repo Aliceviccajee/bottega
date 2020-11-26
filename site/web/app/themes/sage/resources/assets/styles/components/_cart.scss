@@ -44,7 +44,7 @@
 }
 .cart_totals {
 	margin: 1em;
-  width: 85%;
+  max-width: 85% !important;
 }
 .woocommerce-shipping-destination, .woocommerce-shipping-calculator {
 	display: none;
