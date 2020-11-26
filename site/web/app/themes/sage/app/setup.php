@@ -219,7 +219,7 @@ add_action('woocommerce_email_customer_details', function( $order, $sent_to_admi
 }, 15, 4 );
 
 add_action( 'woocommerce_order_status_changed', function( $order_id, $old_status, $new_status ){
-	if( $new_status == "completed" ) {
+	if( $new_status == "processing" ) {
 		$date = get_post_meta( $order_id, '_date_slot', true );
 		$time = get_post_meta( $order_id, '_time_slot', true );
 
