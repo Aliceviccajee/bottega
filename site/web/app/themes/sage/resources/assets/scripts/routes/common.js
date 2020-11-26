@@ -3,43 +3,49 @@ import debounce from 'lodash.debounce'
 
 export default {
 	init() {
-		sessionStorage.SessionName = 'bottega-booking' ,
+		sessionStorage.SessionName = 'bottega-booking',
 
 		datepickerFactory($);
+
+		let isPostCodeValid = false;
+
+		function postcodeValidator() {
+			if ($('#timepicker').val() && $('#datepicker').val() && isPostCodeValid) {
+				$('.products').addClass('enabled');
+			} else {
+				$('.products').removeClass('enabled');
+			}
+		}
+
 		// JavaScript to be fired on all pages
-		$(function () {
-			$('#datepicker').datepicker({
-				dateFormat: 'yy-m-d',
-				minDate: 0,
-				beforeShowDay: function(date) {
-					const day = date.getDay();
-					const curDate = $.datepicker.formatDate('yy-mm-dd', date);
+		$('#datepicker').datepicker({
+			dateFormat: 'yy-m-d',
+			minDate: 0,
+			beforeShowDay: function(date) {
+				const day = date.getDay();
+				const curDate = $.datepicker.formatDate('yy-mm-dd', date);
 
-					return [(day != 0 && day != 1 && day != 2 && day != 3 && curDate !== '2020-11-26')];
-				},
-				onSelect: function () {
-					sessionStorage.setItem('date',this.value);
-					$('#timepicker').html('<option>Checking availability...</option>')
-					$.get('/index.php/wp-json/v1/booking/times', {
-						date: this.value,
-					}).done(function (data) {
-						const html = data.data.map(function(time) {
-							return `<option value="${time}">${time}</option>`;
-						})
-						$('#timepicker').html('<option value="">Select a timeslot</option>' + html);
-					});
-				},
-			});
-			$('#timepicker').on('change', function() {
-				sessionStorage.setItem('slot',$(this).val());
+				return [(day != 0 && day != 1 && day != 2 && day != 3 && curDate !== '2020-11-26')];
+			},
+			onSelect: function () {
+				sessionStorage.setItem('date',this.value);
+				$('#timepicker').html('<option>Checking availability...</option>')
+				$.get('/index.php/wp-json/v1/booking/times', {
+					date: this.value,
+				}).done(function (data) {
+					const html = data.data.map(function(time) {
+						return `<option value="${time}">${time}</option>`;
+					})
+					$('#timepicker').html('<option value="">Select a timeslot</option>' + html);
+					postcodeValidator();
 
-				if ($(this).val() && $('#datepicker').val()) {
-					$('.products').addClass('enabled');
-				} else {
-					$('.products').removeClass('enabled');
-				}
-			})
+				});
+			},
 		});
+		$('#timepicker').on('change', function() {
+			sessionStorage.setItem('slot',$(this).val());
+			postcodeValidator();
+		})
 
 		const bookingInfo = $('.js-booking-info')	;
 
@@ -71,13 +77,18 @@ export default {
 				if (data.status == 'success') {
 					msg.text(data.miles <= 2 ? 'We deliver to your area!' : 'Sorry, we aren\'t currently delivering to your area')
 					msg.addClass(data.miles <= 2 ? 'success' : 'fail')
+					isPostCodeValid = true;
 				} else if (data.status == 'invalid') {
 					msg.text('Please enter a valid full postcode')
 					msg.addClass('fail')
+					isPostCodeValid = false;
 				} else {
 					msg.text('Sorry, we couldn\'t find an address with that postcode')
 					msg.addClass('fail')
+					isPostCodeValid = false;
 				}
+
+				postcodeValidator();
 
 				$('#postcodeLabel').append(msg);
 

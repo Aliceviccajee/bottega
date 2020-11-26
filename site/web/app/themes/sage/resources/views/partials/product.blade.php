@@ -1,6 +1,6 @@
 <div class="product-card">
     <div class="product-image">
-        {!!$product->get_image()!!}
+				{!!App::create_responsive_image($product->get_image_id()) !!}
     </div>
     <div class="product-details">
         <h4 class="product-title">{{$product->get_title()}}</h4>

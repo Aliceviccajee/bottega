@@ -6,7 +6,7 @@
 	@foreach ($rows as $row)
 		<div class="card">
 			<div class="card-img">
-				{!! wp_get_attachment_image($row['image']) !!}
+				{!!App::create_responsive_image($row['image']) !!}
 			</div>
 			<div class="card-info">
 				<h4>{{$row['title']}}</h4>

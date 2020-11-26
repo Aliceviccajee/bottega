@@ -56,6 +56,7 @@
     "stoutlogic/acf-builder": "^1.8",
     "vlucas/phpdotenv": "^3.4.0",
     "woocommerce/woocommerce": "4.6.2",
+    "wpackagist-plugin/cookie-notice": "^1.3",
     "wpackagist-plugin/woocommerce-gateway-stripe": "^4.5"
   },
   "require-dev": {
@@ -71,7 +72,7 @@
   "prefer-stable": true,
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "advanced-custom-fields/advanced-custom-fields-pro", "woocommerce/woocommerce", "wpackagist-plugin/woocommerce-gateway-stripe"],
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "advanced-custom-fields/advanced-custom-fields-pro", "woocommerce/woocommerce", "wpackagist-plugin/woocommerce-gateway-stripe", "wpackagist-plugin/cookie-notice"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
