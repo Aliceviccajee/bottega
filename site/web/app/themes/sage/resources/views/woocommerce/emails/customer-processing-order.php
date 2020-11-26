@@ -34,7 +34,7 @@ $order_id = method_exists( $order, 'get_id' ) ? $order->get_id() : $order->id;
 $date_slot = get_post_meta( $order_id, '_date_slot', true );
 $time_slot = get_post_meta( $order_id, '_time_slot', true );
 ?>
-<p>Your order is arriving at <?php echo $time_slot ?> on <?php echo $date_slot ?>. During busy periods, this may be subject to a small delay.</p>
+<p>Your order is arriving at <?php echo $time_slot ?> on <?php echo date_format(date_create($date_slot), 'd-m-Y') ?>. During busy periods, this may be subject to a small delay.</p>
 
 <?php
 /*
