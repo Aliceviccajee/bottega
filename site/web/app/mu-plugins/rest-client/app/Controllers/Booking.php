@@ -9,16 +9,13 @@ use RestClient\App\Models\Booking;
 class BookingController {
 	private static $booking_slots = [
 		"17:00",
-		"17:20",
-		"17:40",
+		"17:30",
 		"18:00",
-		"18:20",
+		"18:30",
 		"19:00",
-		"19:20",
-		"19:40",
+		"19:30",
 		"20:00",
-		"20:20",
-		"20:40",
+		"20:30",
 		"21:00",
 	];
 	/**
