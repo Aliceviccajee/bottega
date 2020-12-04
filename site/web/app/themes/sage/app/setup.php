@@ -218,13 +218,19 @@ add_action('woocommerce_email_customer_details', function( $order, $sent_to_admi
 	echo $output;
 }, 15, 4 );
 
-add_action( 'woocommerce_new_order', function( $order_id ){
-	$date = get_post_meta( $order_id, '_date_slot', true );
-	$time = get_post_meta( $order_id, '_time_slot', true );
+add_action( 'woocommerce_order_status_changed', function( $order_id, $old_status, $new_status ){
+	if( in_array($new_status, ["processing", "pending", "completed"]) || in_array($old_status, ["processing", "pending", "completed"])) {
+		global $wpdb;
 
-	global $wpdb;
+		$order_exists = $wpdb->get_row("SELECT order_id FROM wp_delivery_slots WHERE order_id = '$order_id';");
 
-	$wpdb->query("INSERT INTO wp_delivery_slots (time, booking_date, order_id) VALUES ('$time', '$date', '$order_id');");
+		if (empty($order_exists)) {
+			$date = get_post_meta( $order_id, '_date_slot', true );
+			$time = get_post_meta( $order_id, '_time_slot', true );
+
+			$wpdb->query("INSERT INTO wp_delivery_slots (time, booking_date, order_id) VALUES ('$time', '$date', '$order_id');");
+		}
+	}
 }, 99, 3 );
 
 add_action( 'woocommerce_order_details_before_order_table_items', function($order) {

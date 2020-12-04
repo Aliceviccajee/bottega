@@ -34,7 +34,7 @@ class BookingController {
 			$date = isset($getParams['date']) ? $getParams['date'] : date_format(date_create(), 'yy-m-d');
 
 			$bookings = $wpdb->get_results("
-				SELECT TIME_FORMAT(time, '%H:%i') as time, COUNT(1) as count
+				SELECT *
 				FROM wp_delivery_slots
 				WHERE booking_date BETWEEN '$date' AND '$date'
 				GROUP BY time
