@@ -33,8 +33,8 @@ export default {
 				$.get('/index.php/wp-json/v1/booking/times', {
 					date: this.value,
 				}).done(function (data) {
-					const html = data.data.map(function(time) {
-						return `<option value="${time}">${time}</option>`;
+					const html = Object.keys(data.data).map(function(label) {
+						return `<option value="${data.data[label]}">${label}</option>`;
 					})
 					$('#timepicker').html('<option value="">Select a timeslot</option>' + html);
 					postcodeValidator();

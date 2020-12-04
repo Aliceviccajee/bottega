@@ -49,7 +49,7 @@ class BookingController {
 
 			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings) {
 				return !isset($bookings[$slot]) || +$bookings[$slot] < 2;
-			})->values()->toArray();
+			})->toArray();
 
 			$this->respondWith('json');
 		} catch (Throwable $e) {
