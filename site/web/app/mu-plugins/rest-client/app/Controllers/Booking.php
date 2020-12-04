@@ -8,13 +8,16 @@ use RestClient\App\Models\Booking;
 
 class BookingController {
 	private static $booking_slots = [
-		"17:00-17:30",
-		"17:30-18:00",
-		"18:00-18:30",
-		"19:30-20:00",
-		"20:00-20:30",
-		"20:30-21:00",
+		"17:00-17:30" => "17:00:00",
+		"17:30-18:00" => "17:30:00",
+		"18:00-18:30" => "18:00:00",
+		"18:30-19:00" => "18:30:00",
+		"19:00-19:30" => "19:00:00",
+		"19:30-20:00" => "19:30:00",
+		"20:00-20:30" => "20:00:00",
+		"20:30-21:00" => "20:30:00",
 	];
+
 	/**
 	 * Base Controller constructor.
 	 */
@@ -34,7 +37,7 @@ class BookingController {
 			$date = isset($getParams['date']) ? $getParams['date'] : date_format(date_create(), 'yy-m-d');
 
 			$bookings = $wpdb->get_results("
-				SELECT *
+				SELECT *, COUNT(1) as count
 				FROM wp_delivery_slots
 				WHERE booking_date BETWEEN '$date' AND '$date'
 				GROUP BY time
@@ -45,7 +48,7 @@ class BookingController {
 			})->toArray();
 
 			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings) {
-				return !isset($bookings[$slot]) || $bookings[$slot] < 2;
+				return !isset($bookings[$slot]) || +$bookings[$slot] < 2;
 			})->values()->toArray();
 
 			$this->respondWith('json');
