@@ -43,11 +43,23 @@ class BookingController {
 				GROUP BY time
 			");
 
+			$currentTime = time();
+			$today = new \DateTime("today"); // This object represents current date/time
+
+			$match_date = new \DateTime(gmdate("Y-m-d\TH:i:s\Z", strtotime($date) ));
+			$match_date->setTime( 0, 0, 0 ); // reset time part, to prevent partial comparison
+
+			$diff = $today->diff( $match_date );
+			$diffDays = (integer)$diff->format( "%R%a" ); // Extract days count in interval
+
 			$bookings = collect($bookings)->mapWithKeys(function($booking) {
 				return [$booking->time => $booking->count];
 			})->toArray();
 
-			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings) {
+			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings, $currentTime, $diffDays) {
+				if ($currentTime > strtotime($slot) && !$diffDays) {
+					return false;
+				}
 				return !isset($bookings[$slot]) || +$bookings[$slot] < 2;
 			})->toArray();
 

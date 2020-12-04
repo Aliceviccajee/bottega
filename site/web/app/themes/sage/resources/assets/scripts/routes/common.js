@@ -34,7 +34,7 @@ export default {
 					date: this.value,
 				}).done(function (data) {
 					const html = Object.keys(data.data).map(function(label) {
-						return `<option value="${data.data[label]}">${label}</option>`;
+						return `<option data-label="${label}" value="${data.data[label]}">${label}</option>`;
 					})
 					$('#timepicker').html('<option value="">Select a timeslot</option>' + html);
 					postcodeValidator();
