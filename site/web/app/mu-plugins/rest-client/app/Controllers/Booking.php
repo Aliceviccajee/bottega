@@ -60,7 +60,7 @@ class BookingController {
 				if ($currentTime > strtotime($slot) && !$diffDays) {
 					return false;
 				}
-				return !isset($bookings[$slot]) || +$bookings[$slot] < 2;
+				return !isset($bookings[$slot]) || +$bookings[$slot] < +get_field('booking_slots', 'options');
 			})->toArray();
 
 			$this->respondWith('json');
