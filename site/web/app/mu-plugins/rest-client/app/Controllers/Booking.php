@@ -18,9 +18,6 @@ class BookingController {
 		"20:30-21:00" => "20:30:00",
 	];
 
-	/**
-	 * Base Controller constructor.
-	 */
 	public function __construct($base_route = 'post', $routes = [])
 	{
 		$this->namespace = 'v1';
@@ -37,31 +34,19 @@ class BookingController {
 			$date = isset($getParams['date']) ? $getParams['date'] : date_format(date_create(), 'yy-m-d');
 
 			$bookings = $wpdb->get_results("
-				SELECT *, COUNT(1) as count
+				SELECT TIME_FORMAT(time, '%H:%i') as time, COUNT(1) as count
 				FROM wp_delivery_slots
 				WHERE booking_date BETWEEN '$date' AND '$date'
 				GROUP BY time
 			");
 
-			$currentTime = time();
-			$today = new \DateTime("today"); // This object represents current date/time
-
-			$match_date = new \DateTime(gmdate("Y-m-d\TH:i:s\Z", strtotime($date) ));
-			$match_date->setTime( 0, 0, 0 ); // reset time part, to prevent partial comparison
-
-			$diff = $today->diff( $match_date );
-			$diffDays = (integer)$diff->format( "%R%a" ); // Extract days count in interval
-
 			$bookings = collect($bookings)->mapWithKeys(function($booking) {
 				return [$booking->time => $booking->count];
 			})->toArray();
 
-			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings, $currentTime, $diffDays) {
-				if ($currentTime > strtotime($slot) && !$diffDays) {
-					return false;
-				}
-				return !isset($bookings[$slot]) || +$bookings[$slot] < +get_field('booking_slots', 'options');
-			})->toArray();
+			$this->response = collect(self::$booking_slots)->filter(function($slot) use ($bookings) {
+				return !isset($bookings[$slot]) || $bookings[$slot] < 2;
+			})->values()->toArray();
 
 			$this->respondWith('json');
 		} catch (Throwable $e) {

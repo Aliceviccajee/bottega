@@ -9,6 +9,7 @@
 			<a href="https://www.instagram.com/bottega.pizza/"><li><img src="@asset('images/instagram.png')" alt="instagram"></li></a>
 		</ul>
 		<ul class="contact">
+			<li>07727099977</li>
 			<li><a href="mailto:hello@bottegapizza.co.uk">hello@bottegapizza.co.uk</a></li>
 			<li><a href="https://bottegapizza.co.uk/privacy-policy-2/">Privacy Policy</li>
 		</ul>

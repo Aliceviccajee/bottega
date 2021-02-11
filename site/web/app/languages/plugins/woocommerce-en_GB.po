@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-10-14 19:07:41+0000\n"
+"PO-Revision-Date: 2020-11-22 20:36:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,413 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: en_GB\n"
 "Project-Id-Version: Plugins - WooCommerce - Stable (latest release)\n"
+
+#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Test_Checkout.php:87
+msgid "Make sure that your checkout is working properly before you launch your store. Go through your checkout process in its entirety: from adding a product to your cart, choosing a shipping location, and making a payment."
+msgstr "Make sure that your checkout is working properly before you launch your store. Go through your checkout process in its entirety: from adding a product to your basket, choosing a shipping location, and making a payment."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:163
+msgid "Taxes applied to this shipping rate using the smallest unit of the currency."
+msgstr "Taxes applied to this shipping rate using the smallest unit of the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:102
+msgid "True if the product is on backorder."
+msgstr "True if the product is on backorder."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:402
+msgid "Add to cart URL."
+msgstr "Add to basket URL."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:342
+msgid "Does the product have additional options before it can be added to the cart?"
+msgstr "Does the product have additional options before it can be added to the basket?"
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:261
+msgid "Line total tax."
+msgstr "Line total tax."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:203
+msgid "True if this is the rate currently selected by the customer for the cart."
+msgstr "True if this is the rate currently selected by the customer for the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:181
+msgid "Meta data attached to the shipping rate."
+msgstr "Meta data attached to the shipping rate."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:175
+msgid "Instance ID of the shipping method that provided the rate."
+msgstr "Instance ID of the shipping method that provided the rate."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:255
+msgid "Line total (the price of the product after coupon discounts have been applied)."
+msgstr "Line total (the price of the product after coupon discounts have been applied)."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:243
+msgid "Line subtotal (the price of the product before coupon discounts have been applied)."
+msgstr "Line subtotal (the price of the product before coupon discounts have been applied)."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:235
+msgid "Item total amounts provided using the smallest unit of the currency."
+msgstr "Item total amounts provided using the smallest unit of the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:206
+msgid "Decimal precision of the returned prices."
+msgstr "Decimal precision of the returned prices."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:200
+msgid "Raw unrounded product prices used in calculations. Provided using a higher unit of precision than the currency."
+msgstr "Raw unrounded product prices used in calculations. Provided using a higher unit of precision than the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:154
+msgid "Price data for the product in the current line item, including or excluding taxes based on the \"display prices during cart and checkout\" setting. Provided using the smallest unit of the currency."
+msgstr "Price data for the product in the current line item, including or excluding taxes based on the \"display prices during basket and checkout\" setting. Provided using the smallest unit of the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:108
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:372
+msgid "If true, only one item of this product is allowed for purchase in a single order."
+msgstr "If true, only one item of this product is allowed for purchase in a single order."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:96
+msgid "True if backorders are allowed past stock availability."
+msgstr "True if backorders are allowed past stock availability."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:60
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:378
+msgid "The maximum quantity than can be added to the cart at once."
+msgstr "The maximum quantity than can be added to the basket at once."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:249
+msgid "Line subtotal tax."
+msgstr "Line subtotal tax."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:169
+msgid "ID of the shipping method that provided the rate."
+msgstr "ID of the shipping method that provided the rate."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:157
+msgid "Price of this shipping rate using the smallest unit of the currency."
+msgstr "Price of this shipping rate using the smallest unit of the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:151
+msgid "Delivery time estimate text, e.g. 3-5 business days."
+msgstr "Delivery time estimate text, e.g. 3-5 business days."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:145
+msgid "Description of the shipping rate, e.g. Dispatched via USPS."
+msgstr "Description of the shipping rate, e.g. Dispatched via Royal Mail."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:139
+msgid "Name of the shipping rate, e.g. Express shipping."
+msgstr "Name of the shipping rate, e.g. Express shipping."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:133
+msgid "ID of the shipping rate."
+msgstr "ID of the shipping rate."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:112
+msgid "List of shipping rates."
+msgstr "List of shipping rates."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:103
+msgid "Quantity of the item in the current package."
+msgstr "Quantity of the item in the current package."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:97
+msgid "Name of the item."
+msgstr "Name of the item."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:83
+msgid "List of cart items the returned shipping rates apply to."
+msgstr "List of basket items the returned shipping rates apply to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:39
+msgid "Shipping destination address."
+msgstr "Shipping destination address."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:33
+msgid "Name of the package."
+msgstr "Name of the package."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:27
+msgid "The ID of the package the shipping rates belong to."
+msgstr "The ID of the package the shipping rates belong to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:244
+msgid "List of cart item errors, for example, items in the cart which are out of stock."
+msgstr "List of basket item errors, for example, items in the basket which are out of stock."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:232
+msgid "The amount of tax charged."
+msgstr "The amount of tax charged."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:226
+msgid "The name of the tax."
+msgstr "The name of the tax."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:218
+msgid "Lines of taxes applied to items and shipping."
+msgstr "Lines of taxes applied to items and shipping."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:212
+msgid "Total tax applied to items and shipping."
+msgstr "Total tax applied to items and shipping."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:206
+msgid "Total price the customer will pay."
+msgstr "Total price the customer will pay."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:200
+msgid "Total tax on shipping."
+msgstr "Total tax on shipping."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:194
+msgid "Total price of shipping."
+msgstr "Total price of shipping."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:188
+msgid "Total tax removed due to discount from applied coupons."
+msgstr "Total tax removed due to discount from applied coupons."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:182
+msgid "Total discount from applied coupons."
+msgstr "Total discount from applied coupons."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:176
+msgid "Total tax on fees."
+msgstr "Total tax on fees."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:170
+msgid "Total price of any applied fees."
+msgstr "Total price of any applied fees."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:164
+msgid "Total tax on items in the cart."
+msgstr "Total tax on items in the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:158
+msgid "Total price of items in the cart."
+msgstr "Total price of items in the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:150
+msgid "Cart total amounts provided using the smallest unit of the currency."
+msgstr "Basket total amounts provided using the smallest unit of the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:138
+msgid "True if the cart needs payment. False for carts with only free products and no shipping costs."
+msgstr "True if the basket needs payment. False for baskets with only free products and no shipping costs."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:106
+msgid "Current set shipping address for the customer."
+msgstr "Current set shipping address for the customer."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:96
+msgid "List of available shipping rates for the cart."
+msgstr "List of available shipping rates for the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartSchema.php:86
+msgid "List of applied cart coupons."
+msgstr "List of applied basket coupons."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/BillingAddressSchema.php:49
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ShippingAddressSchema.php:50
+#: packages/woocommerce-blocks/assets/js/base/components/cart-checkout/address-form/default-address-fields.js:71
+#: packages/woocommerce-blocks/assets/js/blocks/cart-checkout/checkout/edit.js:123
+#: packages/woocommerce-blocks/build/cart.js:1
+#: packages/woocommerce-blocks/build/checkout-frontend.js:6
+#: packages/woocommerce-blocks/build/cart-frontend.js:6
+#: packages/woocommerce-blocks/build/checkout.js:1
+msgid "Apartment, suite, etc."
+msgstr "Flat, suite, etc."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartCouponSchema.php:51
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/OrderCouponSchema.php:45
+msgid "Total tax removed due to discount applied by this coupon."
+msgstr "Total tax removed due to discount applied by this coupon."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartCouponSchema.php:45
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/OrderCouponSchema.php:39
+msgid "Total discount applied by this coupon."
+msgstr "Total discount applied by this coupon."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartCouponSchema.php:37
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/OrderCouponSchema.php:31
+msgid "Total amounts provided using the smallest unit of the currency."
+msgstr "Total amounts provided using the smallest unit of the currency."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartCouponSchema.php:28
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/OrderCouponSchema.php:25
+msgid "The coupons unique code."
+msgstr "The coupon's unique code."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:90
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:366
+msgid "Quantity left in stock if stock is low, or null if not applicable."
+msgstr "Quantity left in stock if stock is low, or null if not applicable."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:78
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:82
+msgid "Product full description in HTML format."
+msgstr "Product full description in HTML format."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:72
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:77
+msgid "Product short description in HTML format."
+msgstr "Product short description in HTML format."
+
+#. Translators: %s Coupon codes.
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:146
+msgid "Invalid coupons were removed from the cart: \"%s\""
+msgstr "Invalid coupons were removed from the basket: \"%s\""
+
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:25
+msgid "Cannot create order from empty cart."
+msgstr "Cannot create order from empty basket."
+
+#. translators: %s: product name
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:699
+msgid "&quot;%s&quot; is not available for purchase."
+msgstr "&quot;%s&quot; is not available for purchase."
+
+#. translators: %1$s coupon code, %2$s reason.
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:603
+msgid "The \"%1$s\" coupon has been removed from your cart: %2$s"
+msgstr "The \"%1$s\" coupon has been removed from your basket: %2$s"
+
+#. translators: %s: coupon code
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:563
+msgid "\"%s\" has already been applied and cannot be used in conjunction with other coupons."
+msgstr "\"%s\" has already been applied and cannot be used in conjunction with other coupons."
+
+#. Translators: %s coupon code
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:532
+msgid "Coupon code \"%s\" has already been applied."
+msgstr "Coupon code \"%s\" has already been applied."
+
+#. Translators: %s coupon code
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:520
+msgid "\"%s\" is an invalid coupon code."
+msgstr "\"%s\" is an invalid coupon code."
+
+#. translators: 1: quantity in stock, 2: product name
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:294
+msgid "There is only %1$s unit of &quot;%2$s&quot; in stock."
+msgid_plural "There are only %1$s units of &quot;%2$s&quot; in stock."
+msgstr[0] "There is only %1$s unit of &quot;%2$s&quot; in stock."
+msgstr[1] "There are only %1$s units of &quot;%2$s&quot; in stock."
+
+#. translators: %s: product name
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:266
+msgid "There are too many &quot;%s&quot; in the cart. Only 1 can be purchased."
+msgstr "There are too many &quot;%s&quot; in the basket. Only 1 can be purchased."
+
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:120
+msgid "Cart item is invalid."
+msgstr "Basket item is invalid."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartRemoveItem.php:56
+msgid "Cart item no longer exists or is invalid."
+msgstr "Basket item no longer exists or is invalid."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartRemoveItem.php:34
+msgid "Unique identifier (key) for the cart item."
+msgstr "Unique identifier (key) for the basket item."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartRemoveCoupon.php:65
+msgid "Coupon cannot be removed because it is not already applied to the cart."
+msgstr "Coupon cannot be removed because it is not already applied to the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartRemoveCoupon.php:61
+msgid "Invalid coupon code."
+msgstr "Invalid coupon code."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateItem.php:38
+msgid "New quantity of the item in the cart."
+msgstr "New quantity of the item in the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateItem.php:34
+msgid "Unique identifier (key) for the cart item to update."
+msgstr "Unique identifier (key) for the basket item to update."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartCouponsByCode.php:62
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartCouponsByCode.php:79
+msgid "Coupon does not exist in the cart."
+msgstr "Coupon does not exist in the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartCouponsByCode.php:30
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartRemoveCoupon.php:34
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartApplyCoupon.php:34
+msgid "Unique identifier for the coupon within the cart."
+msgstr "Unique identifier for the coupon within the basket."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartRemoveCoupon.php:52
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartApplyCoupon.php:52
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartCoupons.php:85
+msgid "Coupons are disabled."
+msgstr "Coupons are disabled."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartSelectShippingRate.php:62
+msgid "Invalid Package ID."
+msgstr "Invalid Package ID."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartSelectShippingRate.php:39
+msgid "The chosen rate ID for the package."
+msgstr "The chosen rate ID for the package."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartSelectShippingRate.php:34
+msgid "The ID of the package being shipped."
+msgstr "The ID of the package being shipped."
+
+#. translators: 1: valid states
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:203
+msgid "Destination state is not valid. Please enter one of the following: %s"
+msgstr "Destination state is not valid. Please enter one of the following: %s"
+
+#. translators: 1: valid country codes
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:176
+msgid "Destination country code is not valid. Please enter one of the following: %s"
+msgstr "Destination country code is not valid. Please enter one of the following: %s"
+
+#. translators: 1: valid country codes
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:158
+msgid "No destination country code was given. Please provide one of the following: %s"
+msgstr "No destination country code was given. Please provide one of the following: %s"
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:94
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:75
+msgid "ISO code for the country of the address being shipped to."
+msgstr "ISO code for the country of the address being shipped to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:87
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:69
+msgid "Zip or Postcode of the address being shipped to."
+msgstr "Zip or Postcode of the address being shipped to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:80
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:63
+msgid "ISO code, or name, for the state, province, or district of the address being shipped to."
+msgstr "ISO code, or name, for the state, province, or district of the address being shipped to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:73
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:57
+msgid "City of the address being shipped to."
+msgstr "City of the address being shipped to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:66
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:51
+msgid "Second line of the address being shipped to."
+msgstr "Second line of the address being shipped to."
+
+#: packages/woocommerce-blocks/src/StoreApi/Routes/CartUpdateShipping.php:59
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartShippingRateSchema.php:45
+msgid "First line of the address being shipped to."
+msgstr "First line of the address being shipped to."
+
+#. translators: %s: product name
+#: src/Checkout/Helpers/ReserveStock.php:90
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:278
+#: packages/woocommerce-blocks/src/StoreApi/Utilities/ReserveStock.php:85
+msgid "&quot;%s&quot; is out of stock and cannot be purchased."
+msgstr "&quot;%s&quot; is out of stock and cannot be purchased."
 
 #: packages/action-scheduler/classes/abstracts/ActionScheduler.php:195
 msgid "%s() was called before the Action Scheduler data store was initialized"
@@ -388,6 +795,15 @@ msgstr "Limit result set to coupons assigned specific coupon IDs."
 msgid "Deactivate"
 msgstr "Deactivate"
 
+#: includes/admin/meta-boxes/views/html-order-items.php:164
+#: packages/woocommerce-blocks/assets/js/base/hooks/payment-methods/use-payment-method-interface.js:58
+#: packages/woocommerce-blocks/build/cart.js:1
+#: packages/woocommerce-blocks/build/checkout-frontend.js:14
+#: packages/woocommerce-blocks/build/cart-frontend.js:14
+#: packages/woocommerce-blocks/build/checkout.js:1
+msgid "Fees:"
+msgstr "Fees:"
+
 #: templates/cart/shipping-calculator.php:31
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:77
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:129
@@ -613,6 +1029,30 @@ msgstr "Number of objects (posts of any type) assigned to the term."
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductAttributeSchema.php:44
 msgid "Attribute type."
 msgstr "Attribute type."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:186
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:192
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:130
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:136
+msgid "Price amount."
+msgstr "Price amount."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:180
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:124
+msgid "Price range, if applicable."
+msgstr "Price range, if applicable."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:174
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:224
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:118
+msgid "Sale product price, if applicable."
+msgstr "Sale product price, if applicable."
+
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:168
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/CartItemSchema.php:218
+#: packages/woocommerce-blocks/src/StoreApi/Schemas/ProductSchema.php:112
+msgid "Regular product price."
+msgstr "Regular product price."
 
 #. translators: Actual coupon code.
 #: includes/abstracts/abstract-wc-order.php:1076
