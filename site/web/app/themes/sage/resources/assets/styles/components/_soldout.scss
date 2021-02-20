@@ -5,16 +5,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: -200px;
 	justify-content: center;
-	@media (max-width: $breakpoint-sm) {
-		margin-top: -400px;
-	}
 	.banner {
 		background: $light_green;
 		width: 100%;
     display: flex;
 		justify-content: center;
+		text-align: center;
 		h4 {
 			font-size: 50px;
 			font-family: $bold;
